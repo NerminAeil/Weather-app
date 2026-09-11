@@ -1,7 +1,7 @@
 const weatherForm = document.querySelector(".weatherForm");
 const cityInput = document.querySelector(".cityInput");
 const card = document.querySelector(".card");
-const apiKey = "e699a351eb4c905fef9865728cf62302";
+
 const locationBtn = document.querySelector("#MyLocation");
 const clearBtn = document.querySelector(".clearBtn");
 const sun_card=document.querySelector(".sun_card");
@@ -20,7 +20,6 @@ locationBtn.addEventListener("click", async (event) => {
           latitude,
           longitude,
         );
-
         displayWeatherInfo(weatherCurrentData);
       } catch (error) {
         displayError(error.message);
@@ -45,7 +44,6 @@ weatherForm.addEventListener("submit", async (event) => {
   if (city) {
     try {
       const WeatherData = await getWeatherData(city);
-
       displayWeatherInfo(WeatherData);
     } catch (error) {
       displayError("City not found");
@@ -62,7 +60,6 @@ async function getWeatherData(city) {
   }
   return await response.json();
 }
-
 function displayWeatherInfo(data) {
   const {
     name: city,
@@ -86,18 +83,12 @@ function displayWeatherInfo(data) {
   const celsius = document.createElement("button");
   const fahrenheit = document.createElement("button");
   const UniBtn = document.createElement("div");
-  
   const feelsLike = document.createElement("p");
-
-
-   
    const sunrise = new Date((data.sys.sunrise + data.timezone) * 1000);
   const sunset = new Date((data.sys.sunset + data.timezone) * 1000);
   const sunriseDisplay = document.createElement("p");
    const sunsetDisplay = document.createElement("p");
   const feelsLikeTemp = ((feels_like - 273.15) * (9 / 5) + 32).toFixed(1);
- 
-
   clearBtn.textContent="Clear";
   cityDisplay.textContent = city;
   cityDisplay.classList.add("cityDisplay");
@@ -131,7 +122,6 @@ function displayWeatherInfo(data) {
   UniBtn.appendChild(celsius);
   UniBtn.appendChild(fahrenheit);
   card.appendChild(UniBtn);
-
   fahrenheit.addEventListener("click", () => {
     tempDisplay.textContent = `${((temp - 273.15) * (9 / 5) + 32).toFixed(1)}°F`;
     feelsLike.textContent = ` Feels Like ${((feels_like - 273.15) * (9 / 5) + 32).toFixed(1)}°F.`;
@@ -157,11 +147,9 @@ function displayWeatherInfo(data) {
       timeZone: "UTC",
     });
   sunriseDisplay.classList.add("sunrise");
-  
   sun_card.appendChild(sunriseDisplay);
   sunsetDisplay.classList.add("sunset");
    sun_card.appendChild(sunsetDisplay);
-  
   clearBtn.addEventListener("click", () => {
     card.style.display = "none";
     clearBtn.style.display = "none";
@@ -181,7 +169,6 @@ function displayWeatherInfo(data) {
     sunsetDisplay.style.transform = "scale(1)";
   });
 }
-
 function getWeatherEmoji(weatherId) {
   switch (true) {
     case weatherId >= 200 && weatherId < 300:
