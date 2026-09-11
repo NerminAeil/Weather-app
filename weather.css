@@ -166,11 +166,6 @@ p {
 }
 @media screen and(max-width: 600px)
 {
-  .weatherForm {
-  display:flex;
-    flex-direction:column;
-    justify-content:center;
+  #MyLocation{
+    font-size:1rem;}
 }
-  button[type="submit"] {
-    margin-left:30px;
-}}
