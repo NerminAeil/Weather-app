@@ -166,8 +166,77 @@ p {
 }
 @media screen and (max-width:600px)
 {
-  #MyLocation{
-    font-size:1.5rem;
-    }
+.weatherForm {
+  margin: 10px;
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+  justify-content:center;
 }
+.cityInput {
+  width: 100px;
+}
+button[type="submit"] {
+  margin-right:10px;
+}
+#MyLocation {
+  margin:20px auto;
+  font-size: 1rem;
+}
+.card {
+  min-width: 200px;
+  height:30px;
+}
+.sunrise,
+.sunset {
+  margin:20px auto;
+  min-width: 200px;
+  height: 300px;
+  font-size: 2rem;
+}
+.clearBtn {
+  padding: 20px;
+  font-size: 2.5rem;
+  width: 200px;
+}
+h1 {
+  font-size: 1.5rem;
+}
+p {
+  font-size: 1rem;
+}
+.cityDisplay,
+.tempDisplay {
+  font-size: 1rem;
+}
+.descDisplay {
+  font-size: 1rem;
+}
+.weatherEmoji {
+  
+  width: 50px;
+  font-size: 4rem;
+}
+.errorDisplay {
+  font-size: 1rem;
+  padding: 10px;
+}
+.TemperatureUnit {
+  font-size: 1rem;
+}
+.celsius,
+.fahrenheit {
+  font-size: 10px;
+  width: 45px;
+  height: 50px;
+  padding: 15px;
+}
+.sun_card {
+  display:flex;
+  flex-direction:column;
+  gap: 10px;
+  justify-content:center;
+}
+}
+  
 
