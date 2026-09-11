@@ -165,29 +165,31 @@ p {
     display:none;
 }
 @media  (max-width:600px)
-{
+#MyLocation{font-size:2rem;}
 .weatherForm {
   margin: 10px auto;
   width:90%;
 }
 .cityInput {
-  width: 100%;
+  width: 100px;
+  font-size:1rem;
 }
 button[type="submit"] {
   margin-right:10px;
   margin-top:10px;
   width:100%;
+  font-size:1rem;
 }
 
 .card {
-  width: 300px;
-  height:30px;
+  width: 200px;
+  height:100%;
 }
 .sunrise,
 .sunset {
   margin:20px auto;
   min-width: 200px;
-  height: 300px;
+  height: 100px;
   font-size: 2rem;
 }
 .clearBtn {
