@@ -164,7 +164,7 @@ p {
 .sun_card,.card,.clearBtn {
     display:none;
 }
-@media screen and (max-width:600px)
+@media  (max-width:600px)
 {
 .weatherForm {
   margin: 10px;
