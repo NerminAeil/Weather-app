@@ -164,3 +164,10 @@ p {
 .sun_card,.card,.clearBtn {
     display:none;
 }
+@media screen and(max-width: 600px)
+{
+  .cityInput{
+    margin:20px auto;}
+  button[type="submit"]{
+    margin:20px auto;}
+}
