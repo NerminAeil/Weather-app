@@ -1,7 +1,6 @@
 const weatherForm = document.querySelector(".weatherForm");
 const cityInput = document.querySelector(".cityInput");
 const card = document.querySelector(".card");
-
 const locationBtn = document.querySelector("#MyLocation");
 const clearBtn = document.querySelector(".clearBtn");
 const sun_card=document.querySelector(".sun_card");
