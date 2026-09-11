@@ -167,24 +167,20 @@ p {
 @media  (max-width:600px)
 {
 .weatherForm {
-  margin: 10px;
-  display:flex;
-  flex-direction:column;
-  gap:10px;
-  justify-content:center;
+  margin: 10px auto;
+  width:90%;
 }
 .cityInput {
-  width: 100px;
+  width: 100%;
 }
 button[type="submit"] {
   margin-right:10px;
+  margin-top:10px;
+  width:100%;
 }
-#MyLocation {
-  margin:20px auto;
-  font-size: 1rem;
-}
+
 .card {
-  min-width: 200px;
+  width: 300px;
   height:30px;
 }
 .sunrise,
@@ -207,14 +203,13 @@ p {
 }
 .cityDisplay,
 .tempDisplay {
-  font-size: 1rem;
+  font-size: 2rem;
 }
 .descDisplay {
-  font-size: 1rem;
+  font-size: 1.2rem;
 }
 .weatherEmoji {
-  
-  width: 50px;
+  width: 60px;
   font-size: 4rem;
 }
 .errorDisplay {
