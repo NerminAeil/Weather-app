@@ -167,6 +167,10 @@ p {
 @media screen and(max-width: 600px)
 {
   .weatherForm {
-  margin: 30px auto ;
+  display:flex;
+    flex-direction:column;
+    justify-content:center;
 }
-}
+  button[type="submit"] {
+    margin-left:30px;
+}}
