@@ -166,8 +166,7 @@ p {
 }
 @media screen and(max-width: 600px)
 {
-  .cityInput{
-    margin:20px auto;}
-  button[type="submit"]{
-    margin:20px auto;}
+  .weatherForm {
+  margin: 30px auto ;
+}
 }
