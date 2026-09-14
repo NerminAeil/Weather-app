@@ -59,6 +59,7 @@ button[type="submit"]:hover {
   box-shadow: 2px 5px 5px hsla(0, 0%, 0%, 0.5);
   min-width: 300px;
   min-height: 50px;
+  display:flex;
   flex-direction: column;
   align-items: center;
 }
@@ -254,7 +255,6 @@ p {
     font-size: 3rem;
     border-radius: 45%;
     min-width: 200px;
-    width: 10px;
   }
   p,
   .descDisplay {
@@ -273,7 +273,6 @@ p {
   .fahrenheit {
     padding: auto;
     min-width: 200px;
-    width: 5px;
     height: 100px;
     margin: 0px 20px;
     border-radius: 80px;
