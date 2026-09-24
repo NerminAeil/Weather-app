@@ -1,24 +1,21 @@
-name: Deploy
+name: Deploy to GitHub Pages
+
 on:
   push:
     branches: [main]
-permissions:
-  contents: write
+
 jobs:
-  build-deploy:
+  build-and-deploy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Generate config.js
-        env:
-          WEATHER_API_KEY: ${{ secrets.WEATHER_API_KEY }}
+
+      - name: Create config.js
         run: |
-          test -n "$WEATHER_API_KEY" || (echo "WEATHER_API_KEY secret is missing" && exit 1)
-          printf "const apiKey = '%s';\n" "$WEATHER_API_KEY" > config.js
-          mkdir -p dist
-          cp index.html weather.css weather.js config.js dist/
+          echo "const API_KEY = \"${{ secrets.WEATHER_API_KEY }}\";" > config.js
+
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
+          publish_dir: .
