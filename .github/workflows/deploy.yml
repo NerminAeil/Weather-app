@@ -10,9 +10,10 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Generate config.js
-        run: echo "const API_KEY = '${{ secrets.WEATHER_API_KEY }}';" > config.js
+        run: echo "const apiKey = '${{ secrets.WEATHER_API_KEY }}';" > config.js
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: .
+          exclude_assets: '.github,README.md,settings.json,cobfig.example.js'
