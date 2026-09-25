@@ -280,6 +280,11 @@ p {
   .UniBtn {
     margin: 20px 0px;
   }
+  .errorDisplay {
+  font-size: 3rem;
+position:relative;
+top:200px;
+}
 }
 
 
