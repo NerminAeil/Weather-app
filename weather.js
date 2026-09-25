@@ -4,7 +4,15 @@ const card = document.querySelector(".card");
 const locationBtn = document.querySelector("#MyLocation");
 const clearBtn = document.querySelector(".clearBtn");
 const sun_card = document.querySelector(".sun_card");
-
+let apiKey = localStorage.getItem("weather_api_key");
+if (!apiKey) {
+    apiKey = prompt("Please enter your OpenWeatherMap API Key:");
+    if (apiKey) {
+        localStorage.setItem("weather_api_key", apiKey.trim());
+    } else {
+        alert("API Key is required to fetch weather data!");
+    }
+}
 locationBtn.addEventListener("click", async (event) => {
   event.preventDefault();
   if (!navigator.geolocation) {
